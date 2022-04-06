@@ -4,7 +4,20 @@ import './index.css';
 import App from './App';
 import Login from '../src/pages/login/login.jsx'
 import reportWebVitals from './reportWebVitals';
+import {
+  Route,
+  BrowserRouter as Router,
+  Redirect,
+  Switch,
+} from 'react-router-dom';
+import { parseJwt, usuarioAutenticado } from './services/auth'
 
+import './index.css'
+
+import login from './pages/login/login'
+
+
+ 
 ReactDOM.render(
   <React.StrictMode>
     <Login />

@@ -8,7 +8,7 @@ import logo from '../../assets/img/Logo.svg';
 
 export default function Login() {
     return (
-  
+
             <body>
                 <div class="box_vermelho">
                     <div id="box">
