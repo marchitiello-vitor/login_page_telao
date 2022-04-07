@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
@@ -16,7 +16,17 @@ import './index.css'
 
 import login from './pages/login/login'
 
-
+const PermimssaoComum = ({component: Component}) => (
+  <Route
+    render={(props) =>
+      usuarioAutenticado() && parseJwt().role === '2' ? (
+        <Component {...props} />
+      ) : (
+        <redirect to="" />
+      )
+    }
+  />
+)
  
 ReactDOM.render(
   <React.StrictMode>
