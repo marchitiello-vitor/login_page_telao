@@ -1,7 +1,5 @@
-
 import '../../assets/css/login.css';
 import React from 'react';
-
 import icone from '../../assets/img/undraw.svg';
 import logo from '../../assets/img/Logo.svg';
 import { Component } from 'react';
@@ -28,6 +26,7 @@ class Login extends Component {
         axios.post('http://localhost:5000/api/Login', {
             email: this.state.email,
             senha: this.state.senha,
+
         })
 
         .then(resposta => {
@@ -40,6 +39,7 @@ class Login extends Component {
                 console.log(base64);
 
                 console.log(this.props);
+                console.log('funfofdp')
             }
         })
 
@@ -72,15 +72,16 @@ class Login extends Component {
                         </div>
                         <label>
                             <p class="titulo">Email</p>
-                            <input type="Email" class="puts" />
+                            <input name='email' value={this.state.email} type="Email" class="puts" onChange={this.atualizaStateCampo}/>
                         </label>
 
                         <label>
                             <p class="titulo">Senha</p>
-                            <input type="password" placeholder="" class="puts" />
+                            <input name='senha' value={this.state.senha} type="password" placeholder="" class="puts" onChange={this.atualizaStateCampo}/>
                         </label>
 
                         <button
+                            onClick={this.efetuarLogin}
                             type="submit"
                             value="Conectar"
                             class="botao"

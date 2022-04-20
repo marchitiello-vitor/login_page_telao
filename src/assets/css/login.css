@@ -57,6 +57,7 @@ p {
 
 input, button {
     display: flex;
+    cursor: pointer;
     flex-direction: column;
     text-decoration: none;
     width: 400px;
@@ -71,6 +72,7 @@ input, button {
 
 .puts {
     margin-bottom: 48px;
+    padding: 10px;
 }
 
 .botao {

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import Login from './pages/login/login.jsx'
 import reportWebVitals from './reportWebVitals';
 import {
@@ -29,7 +28,6 @@ const routing = (
     <div>
       <Routes>
         <Route index element={<Login/>} />
-        {/* <Route exact path="/cadastro" component={Cadastro} /> */}
         {/* <Route path="/Login" element={<Login />}></Route> */}
       </Routes>
     </div>
